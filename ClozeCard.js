@@ -4,7 +4,7 @@ var ClozeCard= function(text, cloze){
 		this.fulltext=text;
 		this.cloze=cloze;
 		if(text.indexOf(cloze)!= -1){
-			this.partialtext=text.replaceAll(this.cloze,'.....');
+			this.partialtext=text.replace(this.cloze,'.....');
 			fs.appendFile("clozeCard.csv", this.partialtext + "," + this.cloze + "\n", "utf8", function(error) {
 				if(err){
 					return console.log(err);

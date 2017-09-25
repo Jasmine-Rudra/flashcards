@@ -7,27 +7,21 @@ var start= function(){
 	inquirer.prompt({
 		name:"option",
 		message:"Choose an option",
-		choice:[{question:"1.Make a new card",value:1},
-				{question:"2.Show existing cards",value:2},
-				{question:"3.Exit",value:3}],
+		choices:[{name:"1.Make a new card",value:1},
+				{name:"2.Show existing cards",value:2},
+				{name:"3.Exit",value:3}],
 		type:"list"
 	}).then(function(answer){
-		switch(answer){
+		switch(answer.option){
 			case 1:addCard();
 				break;
 			case 2:showCard();
 				break;
 			case 3:console.log("Goodbye");
-				exitApp();
 				break;
 			default:console.log("Wrong choice");
-				exitApp();
 		}
 	})
-}
-
-var exitApp=function(){
-	exit();
 }
 
 var addCard=function(){
@@ -68,7 +62,9 @@ var addCard=function(){
 				start();
 			});
 		}
-	})
+
+	});
+
 }
 
 var showCard=function(){
