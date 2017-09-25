@@ -1,5 +1,5 @@
 const fs=require("fs");
-var ClozeCard= new Function(text, cloze){
+var ClozeCard= function(text, cloze){
 	if(this instanceof ClozeCard){
 		this.fulltext=text;
 		this.cloze=cloze;

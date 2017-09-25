@@ -1,5 +1,5 @@
 const fs=require("fs");
-var BasicCard= new Function(front, back){
+var BasicCard=function(front, back){
 	if(this instanceof BasicCard){
 		this.front=front;
 		this.back=back;
