@@ -34,7 +34,7 @@ var addCard=function(){
 	inquirer.prompt({
 		name:"type",
 		message:"Choose card type:",
-		choice:[{name:"1. Basic Card",value:1},
+		choices:[{name:"1. Basic Card",value:1},
 				{name:"2. Cloze Card",value:2}],
 		type:"list"
 	}).then(function(answer){
@@ -75,7 +75,7 @@ var showCard=function(){
 	inquirer.prompt({
 		name:"type",
 		message:"Display all:",
-		choice:[{name:"1. Basic Cards",value:1},
+		choices:[{name:"1. Basic Cards",value:1},
 				{name:"2. Cloze Cards",value:2}],
 		type:"list"
 	}).then(function(answer){
